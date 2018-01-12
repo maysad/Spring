@@ -1,3 +1,4 @@
+
 package com.javalec.ex;
 
 import org.springframework.context.support.AbstractApplicationContext;
@@ -7,8 +8,7 @@ public class MainClass {
 
 	public static void main(String[] args) {
 		
-		AbstractApplicationContext ctx = new GenericXmlApplicationContext();
-		
+		AbstractApplicationContext ctx = new GenericXmlApplicationContext("classpath:applicationCTX.xml");
 		Student student = ctx.getBean("student", Student.class);
 		student.getStudentInfo();
 		
@@ -18,5 +18,5 @@ public class MainClass {
 		ctx.close();
 		
 	}
-
+	
 }

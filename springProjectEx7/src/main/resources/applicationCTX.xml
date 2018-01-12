@@ -5,6 +5,8 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.2.xsd">
 	
+	<bean id="LogAop" class="com.javalec.ex.LogAop"/>
+	
 	<aop:config>
 		<aop:aspect id="logger" ref="LogAop">
 			<aop:pointcut expression="within(com.javalec.ex.*)" id="publicM"/>
@@ -15,7 +17,7 @@
 	<bean id="student" class="com.javalec.ex.Student">
 		<property name="name" value="김희관"></property>
 		<property name="age" value="28"></property>
-		<property name="gradeNum" value="2"></property>
+		<property name="gradenum" value="2"></property>
 		<property name="classnum" value="2"></property>
 	</bean>
 	
